@@ -1,0 +1,16 @@
+﻿@model CurrencyConverter
+@{
+    decimal priceRub = 1000;
+}
+<div>
+    Цена товара в рублях: @priceRub руб.
+    <div>
+        @($"Курс доллара: {Model.USD}, цена в долларах: {Decimal.Round(Model.ConvertToUSD(priceRub), 2)}")
+    </div>
+    <div>
+        @($"Курс евро: {Model.EUR}, цена в евро: {Decimal.Round(Model.ConvertToEUR(priceRub), 2)}")
+    </div>
+    <div>
+        @($"Курс гривны: {Model.UAH10 / 10}, цена в гривнах: {Decimal.Round(Model.ConvertToUAH(priceRub), 2)}")
+    </div>
+</div>
