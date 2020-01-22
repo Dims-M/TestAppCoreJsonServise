@@ -1,7 +1,7 @@
 ﻿namespace CurrencyApp.Models
 {
     /// <summary>
-    /// Класс отвечающий за конвертацию валюь. Относительно ррубля
+    /// Класс отвечающий за конвертацию валюты. Относительно рубля
     /// </summary>
     public class CurrencyConverter
     {
@@ -24,4 +24,6 @@
         public decimal UAH10 { get; set; }
         public decimal ConvertToUAH(decimal priceRUB) => priceRUB / (UAH10 / 10);
     }
+
+
 }
